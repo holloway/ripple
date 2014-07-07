@@ -2,7 +2,6 @@
   position: absolute;
   pointer-events:none;
   display: none;
-  border: solid 1px red;
 }
 
 .ripple-overlay.ripple-overlay-fadeout {
