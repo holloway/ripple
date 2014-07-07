@@ -86,8 +86,8 @@
 		$overlay.style.left = dimensions.left + "px";
 		$overlay.style.borderRadius = computed_style.borderRadius;
 		$overlay.className = "ripple-overlay " + ripple_style;
-		click_details.x = event.x || event.layerX || event.clientX;
-		click_details.y = event.y || event.layerY || event.clientY;
+		click_details.x = event.offsetX;
+		click_details.y = event.offsetY;
 		click_details.width = dimensions.width;
 		click_details.height = dimensions.height;
 		if(ripple_effects[ripple_style] && ripple_effects[ripple_style].init) {
