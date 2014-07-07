@@ -15,26 +15,55 @@
 }
 
 .ripple-overlay.ripple-radial {
-    background: -webkit-radial-gradient(#fff, rgba(0,0,0,0), #fff, rgba(0,0,0,0));
-    background: -moz-radial-gradient(#fff, rgba(0,0,0,0), #fff, rgba(0,0,0,0));
-    background: -o-radial-gradient(#fff, rgba(0,0,0,0), #fff, rgba(0,0,0,0));
-    background: -ms-radial-gradient(#fff, rgba(0,0,0,0), #fff, rgba(0,0,0,0));
-    background: radial-gradient(#fff, rgba(0,0,0,0), #fff, rgba(0,0,0,0));
+    background: -webkit-radial-gradient(#fff 50%, rgba(0,0,0,0) 51%);
+    background: -moz-radial-gradient(#fff 50%, rgba(0,0,0,0) 51%);
+    background: -o-radial-gradient(#fff 50%, rgba(0,0,0,0) 51%);
+    background: -ms-radial-gradient(#fff 50%, rgba(0,0,0,0) 51%);
+    background: radial-gradient(#fff 50%, rgba(0,0,0,0) 51%);
     -webkit-background-size: 10% 10%;
     -moz-background-size: 10% 10%;
     background-size: 10% 10%;
     background-repeat: no-repeat;   
+    opacity: 0.3;
 }
 
 .ripple-overlay.ripple-radial.move {
-  
-  -webkit-transition: all .4s linear;
-    -moz-transition: all .4s linear;
-    -o-transition: all .4s linear;
-    -ms-transition: all .4s linear;
-    transition: all .4s linear;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 .ripple-overlay.ripple-radial.ripple-overlay-fadeout {
   opacity: 0;
+}
+
+
+
+.ripple-overlay.ripple-blue-radial {
+    background: -webkit-radial-gradient(#4285f4 50%, rgba(0,0,0,0) 51%, rgba(0,0,0,0));
+    background: -moz-radial-gradient(#4285f4 50%, rgba(0,0,0,0) 51%, rgba(0,0,0,0));
+    background: -o-radial-gradient(#4285f4 50%, rgba(0,0,0,0) 51%, rgba(0,0,0,0));
+    background: -ms-radial-gradient(#4285f4 50%, rgba(0,0,0,0) 51%, rgba(0,0,0,0));
+    background: radial-gradient(#4285f4 50%, rgba(0,0,0,0) 51%, rgba(0,0,0,0));
+    -webkit-background-size: 10px 10px;
+    -moz-background-size: 10px 10px;
+    background-size: 10px 10px;
+    background-repeat: no-repeat;   
+    opacity: 0.5;
+}
+
+.ripple-overlay.ripple-blue-radial.move {
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  -o-transition: all .3s linear;
+  -ms-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+.ripple-overlay.ripple-blue-radial.ripple-overlay-fadeout {
+  opacity: 0;
+  
+  
 }

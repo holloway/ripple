@@ -22,6 +22,20 @@
 				$overlay.style.backgroundSize = "100% 100%";
 				$overlay.style.backgroundPosition = (click_details.x - click_details.width / 2) + "px " + (click_details.y - click_details.height / 2) + "px";
 			}
+		},
+		"ripple-blue-radial": {
+			size: 400,
+			init: function(){
+				$overlay.style.backgroundPosition = click_details.x + "px " + click_details.y + "px";
+				$overlay.style.backgroundSize = "10px 10px";
+			},
+			soon: function(){
+				var radial = ripple_effects["ripple-blue-radial"];
+				radial.size = click_details.width * 2;
+				$overlay.classList.add("move");
+				$overlay.style.backgroundSize = radial.size + "px " + radial.size + "px";
+				$overlay.style.backgroundPosition = (click_details.x - radial.size / 2) + "px " + (click_details.y - radial.size / 2) + "px";
+			}
 		}
 	};
 
@@ -68,11 +82,14 @@
 	var click = function(event){
 		if(!event.target.classList.contains("ripple")) return;
 		
-		var dimensions = event.target.getBoundingClientRect();
+		var dimensions = {},
+			clientRect = event.target.getBoundingClientRect();
+
 		dimensions.width  = event.target.offsetWidth;
 		dimensions.height = event.target.offsetHeight;
 		
-		dimensions._top = dimensions.top + document.body.scrollTop;
+		dimensions.top = clientRect.top + document.body.scrollTop;
+		dimensions.left = clientRect.left + document.body.scrollLeft;
 		var ripple_style = event.target.className.replace(/[\w-]+\b/g, function(word){
 			if(word.substr(0, "ripple-".length) !== "ripple-") return "";
 			return word;
@@ -82,7 +99,7 @@
 		$overlay.style.backgroundSize = "100% 100%";
 		$overlay.style.width = dimensions.width + "px";
 		$overlay.style.height = dimensions.height + "px";
-		$overlay.style.top = dimensions._top + "px";
+		$overlay.style.top = dimensions.top + "px";
 		$overlay.style.left = dimensions.left + "px";
 		$overlay.style.borderRadius = computed_style.borderRadius;
 		$overlay.className = "ripple-overlay " + ripple_style;
@@ -101,8 +118,10 @@
 		if(event.target.classList.contains("ripple-overlay-fadeout")){
 			$overlay.className = "ripple-overlay";
 			$overlay.style.display = "none";
+			console.log("fadeout-finished");
 		} else {
 			$overlay.classList.add("ripple-overlay-fadeout");
+			console.log("fadeout");
 		}
 	};
 

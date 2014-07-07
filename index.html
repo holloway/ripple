@@ -12,6 +12,24 @@
             color: black;
             text-decoration:none;
         }
+
+        a {
+            color: #4285f4;
+        }
+
+        ul {
+            list-style: none;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        ul a {
+            background: white;
+            display: block;
+            padding: 1em;
+            text-decoration: none;
+        }
+
     </style>
 </head>
 <body style="background:green url('leaf.jpg'); font-family: 'Raleway' sans-serif;text-align:center;padding-bottom:100px"> 
@@ -61,8 +79,31 @@
  Click
 </button>
 
+<h2>Example 3: Button List</h2>
 
+<ul class="linklist">
+    <li><a href="" class="ripple ripple-blue-radial">Click Option 1</a></li>
+    <li><a href="" class="ripple ripple-blue-radial">Click Option 2</a></li>
+    <li><a href="" class="ripple ripple-blue-radial">Click Option 3</a></li>
+    <li><a href="" class="ripple ripple-blue-radial">Click Option 4</a></li>
+</ul>
 
 <script type="text/javascript" src="ripple.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function(){
+        var lists = document.getElementsByClassName("linklist"),
+            list,
+            i;
+        for(i = 0; i < lists.length; i++){
+            list = lists[i];
+            console.log(list);
+            list.addEventListener("click", function(event){
+                var nodeName = event.target.nodeName.toLowerCase();
+                if(nodeName !== "a") return;
+                event.preventDefault();
+            })
+        }
+    });
+</script>
 </body>
 
