@@ -1,18 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
+     <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="ripple.css">
+    <style>
+        .smallprint {
+            font-size:xx-small;
+        }
+
+        .smallprint a {
+            color: black;
+            text-decoration:none;
+        }
+    </style>
 </head>
-<body>
+<body style="background:green url('leaf.jpg'); font-family: 'Raleway' sans-serif;text-align:center;padding-bottom:100px"> 
 
-<button class="ripple ripple-radial" style="width:100px;height:100px;border-radius:5px">
- testing
+<h1>Button Ripple Effects</h1>
+
+<p>The <a href="https://www.google.com/design/spec/animation/responsive-interaction.html#responsive-interaction-ink-reactions" style="font-weight:bold;color:black">Google Material</a> design guide has ripple effects on buttons.<br> The location of a tap within a button makes an animation from that point.</p>
+
+<p>(The reason for these ugly background images is to show the boundaries of images. Sorry)</p>
+
+<h2>Example 1: Square Button</h2>
+
+<button class="ripple ripple-radial" style="background: url('cannelloni.jpg') no-repeat -100px -200px; width:100px;height:100px;color:#444;font-weight:bold;font-size:x-large;padding-top:50px">
+ Click
 </button>
 
-<button class="ripple ripple-radial" style="width:100px;height:100px;">
- testing
+<p class="smallprint">(<a href="http://www.publicdomainpictures.net/view-image.php?image=46641&picture=cannelloni">photographer</a>)</p>
+
+<h2>Example 2: Irregular shaped buttons</h2>
+
+<p>Notice how the ripple doesn't escape the edge</p>
+
+<button class="ripple ripple-radial" style="background: url('flower.jpg') no-repeat -100px -100px; text-shadow: 0px 0px 3px #000; width:300px;height:300px;border-radius:100% 100%;color:white;font-weight:bold;font-size:xx-large">
+ Click me
 </button>
 
+<p class="smallprint">(<a href="http://www.publicdomainpictures.net/view-image.php?image=54969&picture=flower">photographer</a>)</p>
+
 <p>More content to cause scrolling</p>
 <p>More content to cause scrolling</p>
 <p>More content to cause scrolling</p>
@@ -24,14 +51,16 @@
 <p>More content to cause scrolling</p>
 <p>More content to cause scrolling</p>
 
+<p class="smallprint">(<a href="http://www.publicdomainpictures.net/view-image.php?image=1342&picture=leaf&large=1">background photographer</a>)</p>
 
-<button class="ripple ripple-radial" style="width:100px;height:100px;border-radius:5px">
- testing
+<h2>Example 2a: Irregular shaped buttons</h2>
+
+<p>Notice how the ripple doesn't escape the edge</p>
+
+<button class="ripple ripple-radial" style="background: url('cannelloni.jpg') no-repeat -100px -200px; width:100px;height:100px;color:#444;font-weight:bold;font-size:x-large;padding-top:50px; border-top-left-radius: 100%">
+ Click
 </button>
 
-<button class="ripple ripple-stripes" style="width:100px;height:100px;">
- testing
-</button>
 
 
 <script type="text/javascript" src="ripple.js"></script>
