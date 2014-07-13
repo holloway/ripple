@@ -1,4 +1,4 @@
-ripplebuttons.js
+RippleButtons.js
 ================
 
 Standalone library for ripple effects (typically in buttons).
