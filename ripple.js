@@ -100,8 +100,9 @@
 			$element.style.backgroundPosition = x + "px " + y + "px";
 			$element.style.width = dimensions.width + "px";
 			$element.style.height = dimensions.height + "px";
-			$element.style.left = (dimensions.left + document.body.scrollLeft) + "px";
-			$element.style.top = (dimensions.top + document.body.scrollTop) + "px";
+			$element.style.left = (dimensions.left) + "px";
+			console.log(event);
+			$element.style.top = (dimensions.top + document.body.scrollTop + document.documentElement.scrollTop) + "px";
 			var computed_style = window.getComputedStyle(event.target);
 			for (var key in computed_style) {
 				if (key.toString().indexOf("adius") > -1) {
@@ -121,7 +122,7 @@
 			
 			$element.style.borderRadius = "0px";
 			$element.style.left = (x - ripple_without_diameter / 2) + "px";
-			$element.style.top = (document.body.scrollTop + y - ripple_without_diameter / 2) + "px";
+			$element.style.top = (document.body.scrollTop + document.documentElement.scrollTop + y - ripple_without_diameter / 2) + "px";
 			$element.ripple_backgroundSize = ripple_without_diameter + "px " + ripple_without_diameter + "px";
 			$element.style.width = ripple_without_diameter + "px";
 			$element.style.height = ripple_without_diameter + "px";
