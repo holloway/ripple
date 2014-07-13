@@ -101,7 +101,6 @@
 			$element.style.width = dimensions.width + "px";
 			$element.style.height = dimensions.height + "px";
 			$element.style.left = (dimensions.left) + "px";
-			console.log(event);
 			$element.style.top = (dimensions.top + document.body.scrollTop + document.documentElement.scrollTop) + "px";
 			var computed_style = window.getComputedStyle(event.target);
 			for (var key in computed_style) {
