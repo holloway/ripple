@@ -1,39 +1,131 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="ripple.css">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:200,100' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <style>
+    	body,html {
+    		background: #fafafa;
+    		padding:0px 0px 50px 0px;
+    		margin:0px;
+    		font-family: 'Raleway' sans-serif;
+    		-webkit-tap-highlight-color: rgba(0,0,0,0);
+    	}
+
+    	h1 {
+    		background: #03a9f4;
+    		padding: 2em 0px 2em 100px;
+    		color: white;
+    		margin:0px;
+    		font-weight:200;
+    		font-size:xx-large;
+    	}
+
+    	p, h2 {
+    		color: #6c6c6c;
+    		margin-left:100px;
+    		max-width:500px;
+    		font-weight:200;
+    	}
+
+    	h2 {
+    		font-size:large;
+    		color: #333;
+    	}
+
+        .smallprint {
+            font-size:xx-small;
+        }
+
+        .smallprint a {
+            color: black;
+            text-decoration:none;
+        }
+
+        input:focus,
+		select:focus,
+		textarea:focus,
+		button:focus,
+		a:active {
+        	-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			outline: none;
+        }
+
+        a {
+            color: #4285f4;
+        }
+
+        ul {
+            list-style: none;
+            max-width: 400px;
+            text-align:center;
+            box-shadow: 3px 3px 5px #ccc;
+            margin-left:100px;
+            padding:0px;
+        }
+
+        ul a {
+            background: white;
+            display: block;
+            padding: 1em;
+            text-decoration: none;
+        }
+
+    </style>
 </head>
-<body>
+<body> 
 
-<button class="ripple ripple-radial" style="width:100px;height:100px;border-radius:5px">
- testing
+<h1>Ripple.js</h1>
+
+<p>Inspired by <a href="https://www.google.com/design/spec/animation/responsive-interaction.html#responsive-interaction-ink-reactions" style="color: #333;text-decoration:none">Google Material</a> this is a standalone JavaScript library (3kb) that enables ripple effects on buttons and other clicks.</p>
+
+<h2>Example 1: Square Button</h2>
+
+<p>
+	<button class="ripple ripple-radial" style="background: #ffab91; border: none; width:100px;height:100px;color:#444;font-weight:bold;font-size:x-large;padding-top:50px">
+ Click
 </button>
+</p>
 
-<button class="ripple ripple-radial" style="width:100px;height:100px;">
- testing
-</button>
+<h2>Example 2: Irregular shaped buttons</h2>
 
-<p>More content to cause scrolling</p>
-<p>More content to cause scrolling</p>
-<p>More content to cause scrolling</p>
-<p>More content to cause scrolling</p>
-<p>More content to cause scrolling</p>
-<p>More content to cause scrolling</p>
-<p>More content to cause scrolling</p>
-<p>More content to cause scrolling</p>
-<p>More content to cause scrolling</p>
-<p>More content to cause scrolling</p>
+<p>
+	<button style="background: #8bc34a; text-shadow: 0px 0px 3px #000; width:300px;height:300px;border-radius:100% 100%;color:white;font-weight:bold;font-size:xx-large">
+ 	Click me
+	</button>
+</p>
 
+<h2>Example 3: Button List</h2>
 
-<button class="ripple ripple-radial" style="width:100px;height:100px;border-radius:5px">
- testing
-</button>
+<ul class="linklist">
+    <li><a href="" onclick="return false">Click Option 1</a></li>
+    <li><a href="" onclick="return false">Click Option 2</a></li>
+    <li><a href="" onclick="return false">Click Option 3</a></li>
+    <li><a href="" onclick="return false">Click Option 4</a></li>
+</ul>
 
-<button class="ripple ripple-stripes" style="width:100px;height:100px;">
- testing
-</button>
+<h2>Download</h2>
 
+<p><a href="http://github.com/holloway/ripple">Ripple.js on Github</a> - you only need ripple.js to make it work</p>
+
+<h1 style="margin-top:1.5em">What else have you made?</h1>
+
+<p><a href="http://holloway.co.nz/doctored">Doctored.js</a> which is a WYSIWYM and XML editor that does live validation in the browser.</p>
+
+<p><a href="http://holloway.co.nz/docvert">Docvert</a> which converts office files to clean HTML and DocBook.</p>
+
+<p><a href="http://holloway.github.io/swiper-do-swipe">Swiper Do Swipe</a> a live page swiper for the mobile web.</p>
+
+<p><a href="http://holloway.co.nz/steg">Steg Of The Dump</a> a steganography tool for Twitter.</p>
+
+<p><b>Follow me on Twitter <a href="http://twitter.com/hollowaynz">@hollowaynz</a></b></p>
 
 <script type="text/javascript" src="ripple.js"></script>
+
 </body>
 
