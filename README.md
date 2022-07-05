@@ -3,7 +3,7 @@ RippleButtons.js
 
 Standalone library for ripple effects (typically in buttons).
 
-Project homepage with demo here: http://holloway.github.com/ripple
+Project homepage with demo here: http://holloway.github.io/ripple
 
 Licence
 =======
